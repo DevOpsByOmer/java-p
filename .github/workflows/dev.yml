@@ -1,0 +1,17 @@
+name: Testing the application in dev
+on: 
+    push:
+       branches:
+        - main
+    workflow_dispatch:
+jobs:
+  Deploying :
+
+     runs-on: self-hosted
+     steps:
+          
+      - name: Getting the DOcker image 
+        run: docker pull saotech/java-app-multistage:latest
+
+      - name: Running the Application on conatiner
+        run: docker run --name python -d -p 9000:8080 saotech/java-app-multistage:latest
