@@ -11,10 +11,16 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'pip install -r requirements.txt'
+                    sh 'mvn install'
                 }
             }
         }
+        stage('Test') {
+            steps {
+                script {
+                    sh 'mvn test'
+                }
+            }
 
         stage('Deploy') {
             steps {
@@ -24,5 +30,6 @@ pipeline {
             }
         }
     }
+}
 }
     
