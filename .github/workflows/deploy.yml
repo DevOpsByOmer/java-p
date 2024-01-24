@@ -1,4 +1,4 @@
-name: Testing the application in dev
+name: deploying the application 
 on: 
     push:
        branches:
