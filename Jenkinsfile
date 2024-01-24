@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-python-repo.git'
+                git clone 'https://github.com/DevOpsByOmer/python-p.git'
             }
         }
 
